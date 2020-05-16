@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Cafe</title>
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/common.css" />
+  </head>
+
+  <body>
+      <header>
+        <h1>Sample Cafe</h1>
+        <nav>
+          <ul>
+            <li class="list-item"><a href="index.html">Home</a></li>
+            <li class="list-item"><a href="about.html">About</a></li>
+            <li class="list-item"><a href="menu.html">Menu</a></li>
+            <li class="list-item active"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <footer>
+        Copyright© Sample Cafe
+      </footer>
+    <main>
+      <div id="target"></div>
+      <script>
+        var target = document.getElementById("target");
+        var map;
+        var tokyo = { lat: 35.681167, lng: 139.767052 };
+        function initMap() {
+          map = new google.maps.Map(target, {
+            center: tokyo,
+            zoom: 15,
+          });
+        }
+      </script>
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBO2LE2ELyPc9CscNd1oJCTeBndoUYtOo&callback=initMap"
+        async
+        defer
+      ></script>
+      <div class="contact">
+        <p>
+          〒000-0000 ○○県 ○○市○○○○<br />
+          ○○○○駅から徒歩5分 <br /><br />
+          <span>電話番号：</span> 000-0000-0000 <br />
+          <span>営業時間：</span> 11:00～17:00 <br />
+          <span>定休日：</span> 不定休 <br />
+          <span>駐車場：</span> 10台有
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

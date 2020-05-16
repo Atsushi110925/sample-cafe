@@ -1,0 +1,132 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRbkyGbczrOv8weSJhjZGaJmDjd5exKIQVF0wvAU7z0023DGF6F&usqp=CAU");
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+}
+#target {
+  width: 700px;
+  height: 500px;
+}
+main .contact{
+  margin-left: 80px;
+}
+main p{
+  font-size: 28px;
+}
+main span{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ########### 425px以下 ########### */
+@media (max-width: 425px) {
+  body {
+    height: 100vh;
+    grid-template:
+      "... ...... ..."
+      "... header ..." auto
+      "...  main  ..." 1fr
+      "... footer ..." auto
+      "... ...... ..."
+      / auto 1fr auto;
+  }
+   #target {
+  width: 270px;
+  height: 160px;
+  margin: 30px auto 0;
+}
+main{
+  display: unset;
+  width: 100%;
+text-align: center;
+}
+main p{
+  font-size: 18px;
+  text-align: left;
+}
+main span{
+  font-size: 13px;
+}
+}
+/* ########### 426px以上～768px以下 ########### */
+@media (min-width: 426px) and (max-width: 768px) {
+  body {
+    grid-template:
+      "... ...... ..."
+      "... header ..." auto
+      "...  main  ..." 1fr
+      "... footer ..." auto
+      "... ...... ..."
+      / auto 1fr auto;
+  }
+   #target {
+  width: 350px;
+  height: 250px;
+  margin: 50px auto 0;
+}
+main{
+  display: unset;
+  text-align: center;
+}
+main .contact{
+  margin-left: 20px;
+}
+main p{
+  font-size: 25px;
+}
+main span{
+  font-size: 16px;
+}
+}
+/* ########### 769px以上～1024px以下 ########### */
+@media (min-width: 769px) and (max-width: 899px) {
+   #target {
+  width: 330px;
+  height: 240px;
+}
+main .contact{
+  margin-left: 30px;
+}
+main p{
+  font-size: 20px;
+}
+main span{
+  font-size: 14px;
+}
+}
+/* ########### 769px以上～1024px以下 ########### */
+@media (min-width: 900px) and (max-width: 1099px) {
+  #target {
+  width: 400px;
+  height: 300px;
+}
+main .contact{
+  margin-left: 40px;
+}
+main p{
+  font-size: 22px;
+}
+main span{
+  font-size: 15px;
+}
+}
+
+/* ########### 1025px以上1440px以下 ########### */
+@media (min-width: 1100px) and (max-width: 1440px) {
+#target {
+  width: 500px;
+  height: 400px;
+}
+main .contact{
+  margin-left: 60px;
+}
+main p{
+  font-size: 24px;
+}
+main span{
+  font-size: 16px;
+}
+}
